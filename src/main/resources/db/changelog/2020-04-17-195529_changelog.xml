@@ -1,0 +1,77 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="Douglas (generated)" id="1587153355645-1" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createSequence sequenceName="hibernate_sequence"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-2" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="order">
+            <column autoIncrement="true" name="orderid" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="orderPK"/>
+            </column>
+            <column name="customerid" type="bigint"/>
+            <column name="g_total" type="float(53)"/>
+            <column name="order_no" type="varchar(50)"/>
+            <column name="p_method" type="varchar(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-3" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="orderid_orderid" baseTableName="order_items" constraintName="FKddusa702n9mmpvocm5j5dk3k0" deferrable="false" initiallyDeferred="false" referencedColumnNames="orderid" referencedTableName="order"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-4" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <addForeignKeyConstraint baseColumnNames="order_orderid" baseTableName="order_order_items" constraintName="FKokv2ydtqrpgoq1dr20elrjioc" deferrable="false" initiallyDeferred="false" referencedColumnNames="orderid" referencedTableName="order"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-5">
+        <dropTable tableName="hibernate_sequence"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-6">
+        <addAutoIncrement columnDataType="bigint" columnName="id" tableName="album"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-7">
+        <addAutoIncrement columnDataType="bigint" columnName="id" tableName="interprete"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-8">
+        <addAutoIncrement columnDataType="bigint" columnName="id" tableName="interprete_comentario"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-9">
+        <addAutoIncrement columnDataType="bigint" columnName="itemid" tableName="item"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-10">
+        <addAutoIncrement columnDataType="bigint" columnName="order_items" tableName="order_items"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-11">
+        <dropUniqueConstraint constraintName="UK_ntld4tjt01iki5tn6y630dl67" tableName="order_order_items"/>
+        <addUniqueConstraint columnNames="order_items_order_items" constraintName="UK_ntld4tjt01iki5tn6y630dl67" tableName="order_order_items"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-12">
+        <dropPrimaryKey tableName="album"/>
+        <addPrimaryKey columnNames="id" constraintName="albumPK" tableName="album"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-13">
+        <dropPrimaryKey tableName="customer"/>
+        <addPrimaryKey columnNames="customerid" constraintName="customerPK" tableName="customer"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-14">
+        <dropPrimaryKey tableName="interprete"/>
+        <addPrimaryKey columnNames="id" constraintName="interpretePK" tableName="interprete"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-15">
+        <dropPrimaryKey tableName="interprete_comentario"/>
+        <addPrimaryKey columnNames="id" constraintName="interprete_comentarioPK" tableName="interprete_comentario"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-16">
+        <dropPrimaryKey tableName="item"/>
+        <addPrimaryKey columnNames="itemid" constraintName="itemPK" tableName="item"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-17">
+        <dropPrimaryKey tableName="musica"/>
+        <addPrimaryKey columnNames="id" constraintName="musicaPK" tableName="musica"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-18">
+        <dropPrimaryKey tableName="hibernate_sequences"/>
+        <addPrimaryKey columnNames="sequence_name" tableName="hibernate_sequences"/>
+    </changeSet>
+    <changeSet author="Douglas (generated)" id="1587153355645-19">
+        <dropPrimaryKey tableName="order_items"/>
+        <addPrimaryKey columnNames="order_items" constraintName="order_itemsPK" tableName="order_items"/>
+    </changeSet>
+</databaseChangeLog>

@@ -7,6 +7,7 @@ D:\workspace\programador\src\main\java\com\example\programador\entities\Item.jav
 D:\workspace\programador\src\main\java\com\example\programador\repositorio\MusicaRepository.java
 D:\workspace\programador\src\main\java\com\example\programador\entities\Customer.java
 D:\workspace\programador\src\main\java\com\example\programador\ProgramadorApplication.java
+D:\workspace\programador\src\main\java\com\example\programador\repositorio\ItemRepository.java
 D:\workspace\programador\src\main\java\com\example\programador\entities\Interprete.java
 D:\workspace\programador\src\main\java\com\example\programador\entities\Order.java
 D:\workspace\programador\src\main\java\com\example\programador\entities\Album.java
@@ -15,6 +16,7 @@ D:\workspace\programador\src\main\java\com\example\programador\Controller\Custom
 D:\workspace\programador\src\main\java\com\example\programador\repositorio\InterpreteRepository.java
 D:\workspace\programador\src\main\java\com\example\programador\exception\GlobalExceptionHandler.java
 D:\workspace\programador\src\main\java\com\example\programador\repositorio\AlbumRepository.java
+D:\workspace\programador\src\main\java\com\example\programador\Controller\ItemController.java
 D:\workspace\programador\src\main\java\com\example\programador\repositorio\CustomerRepository.java
 D:\workspace\programador\src\main\java\com\example\programador\Controller\AlbumController.java
 D:\workspace\programador\src\main\java\com\example\programador\Controller\MusicaController.java
