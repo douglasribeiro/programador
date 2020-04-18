@@ -13,7 +13,7 @@ public class Item  implements Serializable{
 	private static final long serialVersionUID = -2598265051604140739L;
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long itemID;
 	
 	@Column(length = 30)

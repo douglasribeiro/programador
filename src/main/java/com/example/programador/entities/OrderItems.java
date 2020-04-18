@@ -14,7 +14,7 @@ public class OrderItems implements Serializable{
 	private static final long serialVersionUID = -1289696216198828515L;
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long orderItems;
 	
 	@OneToOne
